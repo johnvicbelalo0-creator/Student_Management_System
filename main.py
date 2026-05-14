@@ -13,7 +13,7 @@ add_student_icon = tk.PhotoImage(file='Student_Management_System/images/createac
 welcome_page_fm = tk.Frame(root, highlightbackground=bg_color, 
                            highlightthickness=3)
 
-heading_lb = tk.Label(welcome_  page_fm, 
+heading_lb = tk.Label(welcome_page_fm, 
                       text= 'Welcome To \nStudent Management System',
                       bg=bg_color, fg='white', font=('Bold', 18))
 heading_lb.place(x=0, y=0, width=400) 
