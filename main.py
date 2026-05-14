@@ -6,9 +6,9 @@ root.title('Student Management System')
 
 bg_color = '#273b7a'
 
-login_student_icon = tk.PhotoImage(file='Student_Management_System/images/student.png')
-login_admin_icon = tk.PhotoImage(file='Student_Management_System/images/admin.png')
-add_student_icon = tk.PhotoImage(file='Student_Management_System/images/createacc.png')
+login_student_icon = tk.PhotoImage(file='Student_Management_System-1/images/student.png')
+login_admin_icon = tk.PhotoImage(file='Student_Management_System-1/images/admin.png')
+add_student_icon = tk.PhotoImage(file='Student_Management_System-1/images/createacc.png')
 
 welcome_page_fm = tk.Frame(root, highlightbackground=bg_color, 
                            highlightthickness=3)
