@@ -30,6 +30,15 @@ admin_login_btn.place(x=120, y=225, width=200)
 admin_login_img = tk.Button(welcome_page_fm, image=login_admin_icon, bd=0)
 admin_login_img.place(x=60, y=200)
 
+
+# ---Student Create Button---
+add_student_btn = tk.Button(welcome_page_fm, text='Create Account', bg=bg_color, fg='white', font=('Bold', 15), bd=0)
+add_student_btn.place(x=120, y=325, width=200)
+
+add_student_img = tk.Button(welcome_page_fm, image=add_student_icon, bd=0)
+add_student_img.place(x=60, y=300)
+
+
 welcome_page_fm.pack(pady=30)
 welcome_page_fm.pack_propagate(False)
 welcome_page_fm.configure(width=400, height=420)
