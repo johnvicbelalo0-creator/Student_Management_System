@@ -101,50 +101,53 @@ def student_login_page():
     student_login_page_fm.pack_propagate(False)
     student_login_page_fm.configure(width=400, height=450)
 
-def show_hide_password():
-
-        if password_ent['show'] == '*':
-            password_ent.config(show='')
-            show_hide_btn.config(image=unlocked_icon)
-        
-        else:
-            password_ent.config(show='*')
-            show_hide_btn.config(image=locked_icon)
-
 # ---Admin Login Page---
-admin_login_page_fm = tk.Frame(root, highlightbackground=bg_color, highlightthickness=3)
+def student_login_page():
+     
+    def show_hide_password():
 
-# ---Student Login Page Frame---
-heading_lb = tk.Label(admin_login_page_fm, text= 'Admin Login Page', bg=bg_color, fg='white', font=('Bold', 18))
-heading_lb.place(x=0, y=0, width=400) 
+            if password_ent['show'] == '*':
+                password_ent.config(show='')
+                show_hide_btn.config(image=unlocked_icon)
+            
+            else:
+                password_ent.config(show='*')
+                show_hide_btn.config(image=locked_icon)
 
-# ---Admin Login Icon---
-stud_icon_lb = tk.Label(admin_login_page_fm, image=login_admin_icon)
-stud_icon_lb.place(x=150, y=40)
+    # ---Admin Login Page Frame---
+    admin_login_page_fm = tk.Frame(root, highlightbackground=bg_color, highlightthickness=3)
 
-# ---Admin Username Entry Box---
-username_lb = tk.Label(admin_login_page_fm, text='Enter Username:', font=('Bold', 15), fg=bg_color)
-username_lb.place(x=80, y=140)
+    heading_lb = tk.Label(admin_login_page_fm, text= 'Admin Login Page', bg=bg_color, fg='white', font=('Bold', 18))
+    heading_lb.place(x=0, y=0, width=400) 
 
-username_ent = tk.Entry(admin_login_page_fm, font=('Bold', 15), justify=tk.CENTER, highlightcolor=bg_color, highlightbackground='gray', highlightthickness=2)
-username_ent.place(x=80, y=190)
+    # ---Admin Login Icon---
+    stud_icon_lb = tk.Label(admin_login_page_fm, image=login_admin_icon)
+    stud_icon_lb.place(x=150, y=40)
 
-# ---Admin Password Entry Box---
-password_lb = tk.Label(admin_login_page_fm, text='Enter Password:', font=('Bold', 15), fg=bg_color)
-password_lb.place(x=80, y=240)
+    # ---Admin Username Entry Box---
+    username_lb = tk.Label(admin_login_page_fm, text='Enter Username:', font=('Bold', 15), fg=bg_color)
+    username_lb.place(x=80, y=140)
 
-password_ent = tk.Entry(admin_login_page_fm, font=('Bold', 15), justify=tk.CENTER, highlightcolor=bg_color, highlightbackground='gray', highlightthickness=2, show='*')
-password_ent.place(x=80, y=290)
+    username_ent = tk.Entry(admin_login_page_fm, font=('Bold', 15), justify=tk.CENTER, highlightcolor=bg_color, highlightbackground='gray', highlightthickness=2)
+    username_ent.place(x=80, y=190)
 
-show_hide_btn = tk.Button(admin_login_page_fm, image=locked_icon, bd=0, command=show_hide_password)
-show_hide_btn.place(x=310, y=280)
+    # ---Admin Password Entry Box---
+    password_lb = tk.Label(admin_login_page_fm, text='Enter Password:', font=('Bold', 15), fg=bg_color)
+    password_lb.place(x=80, y=240)
 
-# ---Login Button---
-login_btn = tk.Button(admin_login_page_fm, text='Login', font=('Bold', 15), bg=bg_color, fg='white')
-login_btn.place(x=95, y=340, width=200, height=40)
+    password_ent = tk.Entry(admin_login_page_fm, font=('Bold', 15), justify=tk.CENTER, highlightcolor=bg_color, highlightbackground='gray', highlightthickness=2, show='*')
+    password_ent.place(x=80, y=290)
 
-admin_login_page_fm.pack(pady=30)
-admin_login_page_fm.pack_propagate(False)
-admin_login_page_fm.configure(width=400, height=450)
+    show_hide_btn = tk.Button(admin_login_page_fm, image=locked_icon, bd=0, command=show_hide_password)
+    show_hide_btn.place(x=310, y=280)
 
+    # ---Login Button---
+    login_btn = tk.Button(admin_login_page_fm, text='Login', font=('Bold', 15), bg=bg_color, fg='white')
+    login_btn.place(x=95, y=340, width=200, height=40)
+
+    admin_login_page_fm.pack(pady=30)
+    admin_login_page_fm.pack_propagate(False)
+    admin_login_page_fm.configure(width=400, height=450)
+
+welcome_page()
 root.mainloop()
