@@ -15,6 +15,10 @@ unlocked_icon = tk.PhotoImage(file='Img/unlocked.png')
 # ---Welcome Page---
 def welcome_page():
 
+    def forward_to_student_login_page():
+        welcome_page_fm.destroy()
+        student_login_page()
+
     # ---Welcome Page Frame---
     welcome_page_fm = tk.Frame(root, highlightbackground=bg_color, highlightthickness=3)
 
@@ -22,7 +26,7 @@ def welcome_page():
     heading_lb.place(x=0, y=0, width=400) 
 
     # ---Student Login Button---
-    student_login_btn = tk.Button(welcome_page_fm, text='Login Student', bg=bg_color, fg='white', font=('Bold', 15), bd=0)
+    student_login_btn = tk.Button(welcome_page_fm, text='Login Student', bg=bg_color, fg='white', font=('Bold', 15), bd=0, command=forward_to_student_login_page)
     student_login_btn.place(x=120, y=125, width=200)
 
     student_login_img = tk.Button(welcome_page_fm, image=login_student_icon, bd=0)
@@ -102,7 +106,7 @@ def student_login_page():
     student_login_page_fm.configure(width=400, height=450)
 
 # ---Admin Login Page---
-def student_login_page():
+def admin_login_page():
      
     def show_hide_password():
 
